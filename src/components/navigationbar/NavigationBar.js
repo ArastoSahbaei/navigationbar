@@ -7,14 +7,14 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 export const NavigationBar = () => {
 	const { height, width } = useWindowDimensions();
 
-	const displayNavigationBarDependingOnWindowScreenSizeWidth = () => {
+	const displayNavigationBarDependingOnWindowSizeWidth = () => {
 		return (width <= 1000) ? <MobileNavigation /> : <DesktopNavigation />
 	}
 
 	return (
 		<div className="navigationBarWrapper">
 			<h1> Logotype </h1>
-			{displayNavigationBarDependingOnWindowScreenSizeWidth()}
+			{displayNavigationBarDependingOnWindowSizeWidth()}
 		</div>
 	)
 }
